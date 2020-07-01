@@ -3,7 +3,7 @@
 NIC=$1
 IPADDR=$2
 
-if [ -z $NIC ]; then
+if [ -z "$NIC" ]; then
   echo "usage:"
   echo "  nmcli_mod [NIC] [IP Address]"
   echo ""
@@ -12,7 +12,7 @@ if [ -z $NIC ]; then
   exit
 fi
 
-if [ -z $IPADDR ]; then
+if [ -z "$IPADDR" ]; then
   echo "usage:"
   echo "  nmcli_mod [NIC] [IP Address]"
   echo ""
@@ -21,8 +21,10 @@ if [ -z $IPADDR ]; then
   exit
 fi
 
+ip address show $NIC
 nmcli con mod $NIC ipv4.method manual ipv4.address $IPADDR connection.autoconnect "yes"
 nmcli con down $NIC; sudo nmcli con up $NIC
+ip address show $NIC
 
 
 
