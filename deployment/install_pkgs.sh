@@ -20,6 +20,10 @@ curl -L "https://github.com/docker/compose/releases/download/1.26.0/docker-compo
 chmod +x /usr/local/bin/docker-compose
 ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 
+# Install Bash Completion for Docker
+yum install -y bash-completion
+curl -L https://raw.githubusercontent.com/docker/compose/1.26.1/contrib/completion/bash/docker-compose -o /etc/bash_completion.d/docker-compose
+
 
 # Install Azure CLI
 rpm --import https://packages.microsoft.com/keys/microsoft.asc
