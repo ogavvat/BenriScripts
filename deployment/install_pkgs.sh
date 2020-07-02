@@ -21,6 +21,16 @@ chmod +x /usr/local/bin/docker-compose
 ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 
 
+# Install Azure CLI
+rpm --import https://packages.microsoft.com/keys/microsoft.asc
+sh -c 'echo -e "[azure-cli]
+name=Azure CLI
+baseurl=https://packages.microsoft.com/yumrepos/azure-cli
+enabled=1
+gpgcheck=1
+gpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/azure-cli.repo'
+yum install -y azure-cli
+
 # Display messages
 echo "If you would like to use Docker as a non-root user, you should now consider adding your user to the docker group with something like:"
 echo "	usermod -aG docker your-user"
