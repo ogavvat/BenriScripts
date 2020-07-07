@@ -18,6 +18,7 @@ if [ -z "$IPADDR" ]; then
   echo ""
   echo "  e.g)"
   echo "    nmcli_mod eth1 192.168.11.10/24"
+  echo "    nmcli_mod eth1 192.168.11.10/24,192.168.11.11/24,"
   exit
 fi
 
