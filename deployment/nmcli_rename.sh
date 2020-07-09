@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 NIC_OLD=$1
 NIC_NEW=$2

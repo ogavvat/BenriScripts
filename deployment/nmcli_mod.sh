@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 NIC=$1
 IPADDR=$2
