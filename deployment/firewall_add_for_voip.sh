@@ -1,5 +1,7 @@
 #!/bin/sh
 
+# Please check 'firewall-add-asterisk-zone.sh, firewall-add-freeswitch-zone.sh too"
+
 firewall-cmd --list-all --zone=public
 
 # Allow SIP
